@@ -4,7 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    height: 60vh;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 .containerWhite {
     display: flex;
@@ -12,18 +15,17 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    width: 1000px;
-    padding: 100px 50px;
+    width: 50%;
+    padding: 70px 50px;
 }
 .package {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #fff;
     border-radius: 5px;
     padding: 20px;
     margin: 20px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 header {
     border-radius: 14px;
@@ -63,4 +65,35 @@ button {
     font-weight: bold;
     background-color: white;
     font-size: 10px;
+}
+@media (max-width: 1300px) {
+    .containerWhite {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 900px) {
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 25px 0;
+    }
+    .containerWhite {
+        padding: 50px;
+        width: 60%;
+    }
+    .package {
+        width: 60%;
+    }
+}
+@media (max-width: 700px) {
+    .containerWhite {
+        padding: 30px;
+        width: 70%;
+    }
+}
+@media (max-width: 400px) {
+    .containerWhite {
+        padding: 15px;
+        width: 85%;
+    }
 }
