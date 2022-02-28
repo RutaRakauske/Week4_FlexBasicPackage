@@ -1,13 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
 body {
-    background-color: #0676e6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0676e6;
     font-family: sans-serif;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
 }
 .containerWhite {
     display: flex;
@@ -15,8 +21,9 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    width: 50%;
-    padding: 70px 50px;
+    width: 70%;
+    height: 70%;
+    padding: 70px 25px;
 }
 .package {
     display: flex;
@@ -25,7 +32,8 @@ body {
     background: #fff;
     border-radius: 5px;
     padding: 20px;
-    margin: 20px;
+    margin: 15px;
+    width: 40%;
 }
 header {
     border-radius: 14px;
@@ -65,35 +73,47 @@ button {
     font-weight: bold;
     background-color: white;
     font-size: 10px;
+    width: 150px;
 }
-@media (max-width: 1300px) {
+.mainButton {
+    text-align: center;
+}
+@media (max-width: 1250px) {
     .containerWhite {
         flex-wrap: wrap;
+        height: 100%;
+        padding: 30px 25px;
     }
 }
 @media (max-width: 900px) {
-    body {
-        width: 100%;
-        height: 100%;
-        margin: 25px 0;
-    }
     .containerWhite {
-        padding: 50px;
-        width: 60%;
+        width: 80%;
+        padding: 20px 20px;
+    }
+    .package {
+        width: 50%;
+    }
+}
+@media (max-width: 750px) {
+    .containerWhite {
+        width: 90%;
+        padding: 20px;
     }
     .package {
         width: 60%;
     }
 }
-@media (max-width: 700px) {
-    .containerWhite {
-        padding: 30px;
+@media (max-width: 600px) {
+    .package {
         width: 70%;
     }
 }
 @media (max-width: 400px) {
     .containerWhite {
-        padding: 15px;
-        width: 85%;
+        width: 100%;
+        padding: 15;
+    }
+    .package {
+        width: 90%;
     }
 }
